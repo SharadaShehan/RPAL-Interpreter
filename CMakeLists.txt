@@ -3,4 +3,4 @@ project(RPAL)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(RPAL main.cpp)
+add_executable(RPAL main.cpp token.h constants.h)

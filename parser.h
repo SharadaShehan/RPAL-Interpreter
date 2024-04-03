@@ -8,10 +8,9 @@
 #include <cstdlib>
 #include <vector>
 
-
-// #include "token.h"
+ #include "token.h"
+ #include "constants.h"
 // #include "tree.h"
-// #include "constants.h"
 // #include "typeDef.h"
 using namespace std;
 
@@ -24,7 +23,7 @@ public:
     bool isASTFlagged;      // Flag to check if AST is to be printed
     char programString[5000];  // Array to store the Program
     int index;           // Current index of the program
-    // token nextToken;     // Next token to be read
+    token nextToken;     // Next token to be parsed
 
     parser(char characterArray[], int fileLength, bool isASTFlagged)
     {
