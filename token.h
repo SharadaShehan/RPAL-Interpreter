@@ -18,7 +18,7 @@ public:
         type = sts;
     }
 
-    void setVal(const string &str)  // Set value of token
+    void setValue(const string &str)  // Set value of token
     {
         val = str;
     }
@@ -28,7 +28,7 @@ public:
         return type;
     }
 
-    string getVal()    // Get value of token
+    string getValue()    // Get value of token
     {
         return val;
     }
