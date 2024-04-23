@@ -14,6 +14,7 @@
 #include "tree.h"
 #include "grammerRules.h"
 #include "parameters.h"
+#include "standardizeTree.h"
 using namespace std;
 
 
@@ -46,14 +47,23 @@ public:
         // Parse starting from the start symbol
         procedure_E(params);
 
-         if (params->index >= params->sizeOfFile - 1) // Check if end of file is reached
-         {
-            // Get the root of the tree
-            tree *parsedTree = params->syntaxTree.top(); // Get the root of the tree
+        if (params->index < params->sizeOfFile - 1) // Check if end of file is not reached
+        {
+            cout << "Unable to Parse: Expected end of file but more tokens were found" << endl;
+            exit(0);
+        }
 
-            // Print the abstact syntax tree if the flag is set
-            if (isASTFlagged == 1) parsedTree->printTree(0);
-         }
+        // Get the root of the tree
+        tree *parsedTree = params->syntaxTree.top(); // Get the root of the tree
+
+        // Print the abstact syntax tree if the flag is set
+        if (isASTFlagged == 1) parsedTree->printTree(0);
+
+        // Standardize the tree
+        makeStandardizedTree(parsedTree);
+
+        // Print the standardized tree
+        // parsedTree->printTree(0);
     }
 
 };
