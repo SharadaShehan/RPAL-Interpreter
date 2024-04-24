@@ -15,6 +15,7 @@
 #include "grammerRules.h"
 #include "parameters.h"
 #include "standardizeTree.h"
+#include "cseMachine.h"
 using namespace std;
 
 
@@ -62,8 +63,22 @@ public:
         // Standardize the tree
         makeStandardizedTree(parsedTree);
 
-        // Print the standardized tree
-        // parsedTree->printTree(0);
-    }
+        // Create control structures for CSE machine
+        tree *controlStructuresMap[300][300];
+        buildControlStructures(parsedTree, controlStructuresMap);
 
+        // print created control structures
+        for (int i = 0; i < 300; i++) {
+            if (controlStructuresMap[i][0] == NULL)
+                break;
+            for (int j = 0; j < 300; j++)
+            {
+                if (controlStructuresMap[i][j] == NULL)
+                    break;
+                cout << "(" << controlStructuresMap[i][j]->getType() << ")" << controlStructuresMap[i][j]->getValue() << " ";
+            }
+            cout << endl;
+        }
+
+    }
 };
