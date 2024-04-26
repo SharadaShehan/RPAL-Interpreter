@@ -67,18 +67,21 @@ public:
         tree *controlStructuresMap[300][300];
         buildControlStructures(parsedTree, controlStructuresMap);
 
-        // print created control structures
-        for (int i = 0; i < 300; i++) {
-            if (controlStructuresMap[i][0] == NULL)
-                break;
+        // count non null rows
+        int rowsCount = 0;
+        while (controlStructuresMap[rowsCount][0] != NULL) rowsCount++;
+
+        // Create a 2D vector of control structures without NULL values
+        vector<vector<tree*>> controlStructures;
+        for (int i = 0; i < rowsCount; i++) {
+            vector<tree*> rowVector;
             for (int j = 0; j < 300; j++)
-            {
-                if (controlStructuresMap[i][j] == NULL)
-                    break;
-                cout << "(" << controlStructuresMap[i][j]->getType() << ")" << controlStructuresMap[i][j]->getValue() << " ";
-            }
-            cout << endl;
+                if (controlStructuresMap[i][j] != NULL) rowVector.push_back(controlStructuresMap[i][j]);
+            controlStructures.push_back(rowVector);
         }
 
+        // evaluate the control structures using the CSE machine
+        evaluateST(controlStructures);
+        
     }
 };

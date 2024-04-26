@@ -73,7 +73,7 @@ bool isCommentCharater(char ch)
 // Checks if the given character is a string character
 bool isStringCharacter(char ch)
 {
-    if (ch == '\t' || ch == '\n' || ch == '\\' || ch == '\'' || ch == '(' || ch == ')' || ch == ';' || ch == ',' || ch == ' ' || ch == '_' || isAlpha(ch) || isDigit(ch) || isOperator(ch))
+    if (ch == '\t' || ch == '\n' || ch == '\\' || ch == '\'' || ch == '(' || ch == ')' || ch == ';' || ch == ',' || ch == ' ' || ch == '_' || ch == '?' || isAlpha(ch) || isDigit(ch) || isOperator(ch))
         return true;
     return false;
 }

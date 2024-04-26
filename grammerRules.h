@@ -293,10 +293,10 @@ At -> At '*' Af
 
     while (params->nextToken.getValue() == "*" || params->nextToken.getValue() == "/")
     {
-        string temp = params->nextToken.getValue();
-        read(temp, "OPERATOR", params);
+        string environmentNode = params->nextToken.getValue();
+        read(environmentNode, "OPERATOR", params);
         procedure_Af(params);
-        buildTree(temp, "OPERATOR", 2, params);
+        buildTree(environmentNode, "OPERATOR", 2, params);
     }
 }
 
@@ -328,10 +328,10 @@ A -> A '+' At
 
     while (params->nextToken.getValue() == "+" || params->nextToken.getValue() == "-")
     {
-        string temp = params->nextToken.getValue();
-        read(temp, "OPERATOR", params);
+        string environmentNode = params->nextToken.getValue();
+        read(environmentNode, "OPERATOR", params);
         procedure_At(params);
-        buildTree(temp, "OPERATOR", 2, params);
+        buildTree(environmentNode, "OPERATOR", 2, params);
     }
 }
 
@@ -348,42 +348,42 @@ Bp -> A ('gr' | '>' ) A
 */
 {
     procedure_A(params);
-    string temp = params->nextToken.getValue();
+    string environmentNode = params->nextToken.getValue();
     string temp2 = params->nextToken.getType();
 
     if (params->nextToken.getValue() == "gr" || params->nextToken.getValue() == ">")
     {
-        read(temp, temp2, params);
+        read(environmentNode, temp2, params);
         procedure_A(params);
         buildTree("gr", "KEYWORD", 2, params);
     }
     else if (params->nextToken.getValue() == "ge" || params->nextToken.getValue() == ">=")
     {
-        read(temp, temp2, params);
+        read(environmentNode, temp2, params);
         procedure_A(params);
         buildTree("ge", "KEYWORD", 2, params);
     }
     else if (params->nextToken.getValue() == "ls" || params->nextToken.getValue() == "<")
     {
-        read(temp, temp2, params);
+        read(environmentNode, temp2, params);
         procedure_A(params);
         buildTree("ls", "KEYWORD", 2, params);
     }
     else if (params->nextToken.getValue() == "le" || params->nextToken.getValue() == "<=") // Bp -> A (’le’ | ’<=’)
     {
-        read(temp, temp2, params);
+        read(environmentNode, temp2, params);
         procedure_A(params);
         buildTree("le", "KEYWORD", 2, params);
     }
     else if (params->nextToken.getValue() == "eq") // Bp -> A ’eq’ A
     {
-        read(temp, temp2, params);
+        read(environmentNode, temp2, params);
         procedure_A(params);
         buildTree("eq", "KEYWORD", 2, params);
     }
     else if (params->nextToken.getValue() == "ne") // Bp -> A ’ne’ A
     {
-        read(temp, temp2, params);
+        read(environmentNode, temp2, params);
         procedure_A(params);
         buildTree("ne", "KEYWORD", 2, params);
     }
