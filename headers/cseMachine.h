@@ -715,7 +715,7 @@ void evaluateST(vector<vector<tree*>> &controlStructure) {
                 // check if the next node is a string
                 if (isNextString->getType() == "STR") {
                     // Get remaining characters
-                    string strRes = "'" + isNextString->getValue().substr(2, isNextString->getValue().length() - 3);
+                    string strRes = "'" + isNextString->getValue().substr(2, isNextString->getValue().length() - 3) + "'";
                     evaluatingStack.pop();
                     evaluatingStack.push(tree::createNode(strRes, "STR"));
                 }
