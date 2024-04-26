@@ -1,5 +1,5 @@
-#ifndef AA95CCF9_9DD5_424A_A44C_B160A8EA2A44
-#define AA95CCF9_9DD5_424A_A44C_B160A8EA2A44
+#ifndef RPAL_CSEENVIRONMENT_H
+#define RPAL_CSEENVIRONMENT_H
 
 #include <vector>
 #include <iostream>
@@ -28,4 +28,4 @@ public:
 };
 
 
-#endif /* AA95CCF9_9DD5_424A_A44C_B160A8EA2A44 */
+#endif // RPAL_CSEENVIRONMENT_H

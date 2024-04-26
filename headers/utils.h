@@ -1,5 +1,6 @@
 #ifndef RPAL_UTILS_H
 #define RPAL_UTILS_H
+
 #include "parameters.h"
 #include "scanner.h"
 #include "tree.h"

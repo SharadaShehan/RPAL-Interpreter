@@ -1,5 +1,6 @@
-#ifndef AB717F66_35BD_4788_8B48_EC223930D226
-#define AB717F66_35BD_4788_8B48_EC223930D226
+#ifndef RPAL_STANDARDIZETREE_H
+#define RPAL_STANDARDIZETREE_H
+
 #include "tree.h"
 using namespace std;
 
@@ -205,4 +206,4 @@ tree *makeStandardizedTree(tree *treeNode)
     return NULL;
 }
 
-#endif /* AB717F66_35BD_4788_8B48_EC223930D226 */
+#endif // RPAL_STANDARDIZETREE_H

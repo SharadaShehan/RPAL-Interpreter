@@ -1,5 +1,5 @@
-#ifndef B36A04FB_AF91_4DCE_967C_77A5166758E1
-#define B36A04FB_AF91_4DCE_967C_77A5166758E1
+#ifndef RPAL_CSEMACHINE_H
+#define RPAL_CSEMACHINE_H
 
 #include <stack>
 #include <vector>
@@ -1228,4 +1228,4 @@ void evaluateST(vector<vector<tree*>> &controlStructure) {
     cout << endl;
 }
 
-#endif /* B36A04FB_AF91_4DCE_967C_77A5166758E1 */
+#endif // RPAL_CSEMACHINE_H

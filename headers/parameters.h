@@ -1,5 +1,6 @@
-#ifndef B3D9C1A3_658F_4A0D_ABA4_F03E93B4F12E
-#define B3D9C1A3_658F_4A0D_ABA4_F03E93B4F12E
+#ifndef RPAL_PARAMETERS_H
+#define RPAL_PARAMETERS_H
+
 #include <iostream>
 #include "token.h"
 #include "tree.h"
@@ -15,4 +16,4 @@ struct parameters
     };
 
 
-#endif /* B3D9C1A3_658F_4A0D_ABA4_F03E93B4F12E */
+#endif // RPAL_PARAMETERS_H

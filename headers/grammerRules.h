@@ -1,5 +1,6 @@
 #ifndef RPAL_GRAMMERRULES_H
 #define RPAL_GRAMMERRULES_H
+
 #include "parameters.h"
 #include "utils.h"
 

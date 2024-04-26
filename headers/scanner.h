@@ -1,5 +1,6 @@
 #ifndef RPAL_SCANNER_H
 #define RPAL_SCANNER_H
+
 #include "typeDef.h"
 using namespace std;
 

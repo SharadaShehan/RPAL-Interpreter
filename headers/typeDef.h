@@ -1,5 +1,6 @@
 #ifndef RPAL_TYPEDEF_H
 #define RPAL_TYPEDEF_H
+
 #include "constants.h"
 #include <string.h>
 using namespace std;

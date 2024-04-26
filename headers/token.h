@@ -1,5 +1,5 @@
-#ifndef TOKEN_H_
-#define TOKEN_H_
+#ifndef TOKEN_H
+#define TOKEN_H
 
 #include <iostream>
 using namespace std;
@@ -37,4 +37,4 @@ public:
     
 };
 
-#endif
+#endif // TOKEN_H

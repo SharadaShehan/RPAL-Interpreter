@@ -1,4 +1,3 @@
-
 #ifndef RPAL_CONSTANTS_H
 #define RPAL_CONSTANTS_H
 

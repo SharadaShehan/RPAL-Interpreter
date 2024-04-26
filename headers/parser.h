@@ -1,3 +1,6 @@
+#ifndef RPAL_PARSER_H
+#define RPAL_PARSER_H
+
 #include <iterator>
 #include <iostream>
 #include <stack>
@@ -85,3 +88,5 @@ public:
         
     }
 };
+
+#endif // RPAL_PARSER_H
