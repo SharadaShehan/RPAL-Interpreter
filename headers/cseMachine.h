@@ -507,6 +507,9 @@ void evaluateST(vector<vector<tree*>> &controlStructure) {
             }
             // if node on top of evaluating stack is a 'print' node
             else if (evaluatingStackTop->getValue() == "Print") {
+                // print initial message
+                cout << "Output of the above program is:" << endl;
+
                 // get the 'print' node
                 evaluatingStack.pop();
                 tree *nextToPrint = evaluatingStack.top();
