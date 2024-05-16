@@ -4,5 +4,7 @@
 
 ```
 make
+```
+```
 ./rpal <input_file>
 ```
